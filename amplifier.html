@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="index.html"><i class="fas fa-home"></i></a>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-box"></i> &nbsp;Products&nbsp;<i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="acoustic guitars.html">Acoustic Guitars</a>
+        <a href="electric guitars.html">Electric Guitars</a>
+        <a href="bass guitars.html">Bass Guitars</a>
+        <a href="ukulele.html">Ukulele</a>
+        <a href="amplifier.html">Amplifier</a>
+        <a href="pedal.html">Pedal Amplifier</a>
+        <a href="accessories.html">Accessories</a>
+    </div>
+  </div> 
+<a href="message.html"><i class="fas fa-envelope"></i></a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+    <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+    <h1><box-icon name='guitar-amp' type='solid' color='#333' ></box-icon> Amplifier <box-icon name='guitar-amp' type='solid' color='#333' >></box-icon></h1>
+    <section>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('amplifier/Amplifier\ 4.png');"></div>
+            <h2>Martin Audio MA 2.0 Lightweight High Performance Amplifier</h2>
+            <p>Adding to the range of MA Series amplifiers is the new MA2.0. At 1U and 7.3kg (16lbs) this amplifier offers unparalleled performance in a compact, light weight, 
+                cost effective package.</p>
+            <p>Price: ₱ 66,712.50</p>
+            <button onclick="addToCart('Martin Audio MA 2.0 Lightweight High Performance Amplifier', 66712.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('amplifier/Amplifier\ 3.png');"></div>
+            <h2>QSC RMX5050 Power Amplifier</h2>
+            <p>QSC's RMX 5050 power amplifier represents the state-of-the-art in professional quality performance at an affordable price. Perfectly suited for 
+                a wide range of sound reinforcement applications including professional touring, performing musicians, and mobile entertainers, the RMX 5050
+                 is optimized to deliver high levels of sustained power, extraordinary audio performance and road-proven reliability. </p>
+            <p>Price: ₱ 79,500.00</p>
+            <button onclick="addToCart('QSC RMX5050 Power Amplifier', 79500.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('amplifier/Amplifier\ 1.png');"></div>
+            <h2>Sennheiser HDV820-UK Headphone Amplifier / DAC</h2>
+            <p>The HDV 820 unlocks the potential of your Sennheiser headphone collection. Expect class-leading DAC and headphone 
+                amplifier technology with a plethora of state-of-the-art I/O and world-class conversion. 
+                The HDV 820 is a reference-grade solution for critical listening tasks.</p>
+            <p>Price: ₱ 1121,492.50</p>
+            <button onclick="addToCart('Sennheiser HDV820-UK Headphone Amplifier / DAC', 121492.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('amplifier/Amplifier\ 2.png');"></div>
+            <h2>Allen & Heath IDR-8 16x16 Matrix Mixer</h2>
+            <p>Allen & Heath IDR-8 is a 16 x 16 matrix mixer with an extensive array of audio 
+                management tools designed to reduce the need for additional devices for an installation, or carried in the hire inventory. 
+                Allen & Heath preamps, 24bit converters 
+                and fixed DSP architecture ensure that concert-quality low-latency sound is delivered efficiently to where it is needed.</p>
+            <p>Price: ₱ 146,550.00</p>
+            <button onclick="addToCart('Allen & Heath IDR-8 16x16 Matrix Mixer', 1146550.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('amplifier/Amplifier\ 5.png');"></div>
+            <h2>Martin Audio iKON iK42 High Power 4-Channel Power Amplifier</h2>
+            <p>AThe iKON iK42 is an advanced 4-channel power amplifier which combines very high power density with superb audio performance, state-of-the-art DSP and
+                 network control.</p>
+            <p>Price: ₱ 359,175.00</p>
+            <button onclick="addToCart('Martin Audio iKON iK42 High Power 4-Channel Power Amplifier', 359175.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        
+    </section>
+
+
+<!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+
+<!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js">
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+    function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+    //---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+         function updateCartCount() {
+             var cartCountElement = document.getElementById('cartCount');
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             var count = cart.length;
+        
+             cartCountElement.textContent = count;
+         }
+        
+         // Update cart count on page load
+         updateCartCount();
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function searchProducts() {
+    var searchInput = document.getElementById('searchBar').value.toLowerCase();
+    console.log("Search Query: ", searchInput);
+    localStorage.setItem('searchQuery', searchInput);
+    // Redirect to the searchResults.html page
+    window.location.href = 'acoustic guitars.html';
+    window.location.href = 'bass guitars.htm';
+    window.location.href = 'ukulele.html';
+    window.location.href = 'electric guitars.html';
+    window.location.href = 'accessories.html';
+    window.location.href = 'pedal.html';
+    window.location.href = 'amplifier.html';
+}
+    </script>
+    
+    </body>
+    </html>

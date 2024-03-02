@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <form id="searchForm" onsubmit="searchProducts();">
+        <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="index.html"><i class="fas fa-home"></i></a>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-box"></i> &nbsp;Products&nbsp;<i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="acoustic guitars.html">Acoustic Guitars</a>
+      <a href="electric guitars.html">Electric Guitars</a>
+      <a href="bass guitars.html">Bass Guitars</a>
+      <a href="ukulele.html">Ukulele</a>
+      <a href="amplifier.html">Amplifier</a>
+      <a href="pedal.html">Pedal Amplifier</a>
+      <a href="accessories.html">Accessories</a>
+    </div>
+  </div> 
+<a href="message.html"><i class="fas fa-envelope"></i></a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+    <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+    <h1> <i class="fas fa-guitar electric-guitar-icon"></i>&nbsp;Electric Guitars&nbsp;<i class="fas fa-guitar electric-guitar-icon"></i></h1>
+    <section>
+        <div class="product">
+            <div class="product-image" style="background-image: url('Electric/electric\ 1.png');"></div>
+            <h2>RJ Guitars Basic Electrics - Skycaster Electric Guitar (Stratocaster)</h2>
+            <p>The Skycaster is a high quality electric guitar that is perfect for musicians of all skill levels. 
+                Crafted with a Paulownia body and a Maple neck with Satin finish, this guitar is designed to provide 
+                excellent sound quality and comfort while playing. The fretboard is made of Maple/Rosewood for added durability 
+                and style.
+                 </p>
+            <p><b>Price: ₱ 5,799.00</b></p>
+    <button onclick="addToCart('RJ Guitars Basic Electrics - Skycaster Electric Guitar (Stratocaster)', 5799.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Electric/electric\ 2.png');"></div>
+            <h2>SX SEM2/PT Pink Twilight Telecaster Electric Guitar<br>&nbsp;</h2>
+            <p>Using over 20 years experience building some of the best value Electric Guitars on the market SX SEM 
+                guitars combine classic electric guitar body shapes with bold modern and vibrant finishes to bring you 
+                the best in electric guitar design with a very current look.<br>&nbsp;
+                 </p>
+            <p><b>Price: ₱ 6,825.00</b></p>
+    <button onclick="addToCart('SX SEM2/PT Pink Twilight Telecaster Electric Guitar', 6825.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Electric/electric\ 3.png');"></div>
+            <h2>SSX SEM2/3TS 3 Tone Sunburst Telecaster Electric Guitar</h2>
+            <p>SX SEM guitars combine classic electric guitar body shapes with bold modern and vibrant finishes 
+                to bring you the best in electric guitar design with a very current look.<br>&nbsp;<br>&nbsp;
+                 </p>
+            <p><b>Price: ₱ 6,825.00</b></p>
+    <button onclick="addToCart('SX SEM2/3TS 3 Tone Sunburst Telecaster Electric Guitar', 6825.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <div class="product-image" style="background-image: url('Electric/electric\ 4.png');"></div>
+            <h2>SX SST/ALDER/H/VWH Stratocaster Electric Guitar Halllow Body Vintage White</h2>
+            <p>Stunning, handmade custom guitars to affordable standard series, we have the right guitar for every player. 
+                When you need vicious tones, consummate playability and drop-dead looks, you need SX Guitars.
+                 </p>
+            <p><b>Price: ₱ 9,525.00</b></p>
+    <button onclick="addToCart('SSX SST/ALDER/H/VWH Stratocaster Electric Guitar Halllow Body Vintage Whiter', 9525.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <div class="product-image" style="background-image: url('Electric/electric\ 5.png');"></div>
+            <h2>SX EE3-VS Les Paul Vintage Sunburst Electric Guitar<br>&nbsp;</h2>
+            <p>The Les Paul Vintage Sunburst SX EE3VS Series EE3 Electric Guitar is an exceptional choice for musicians who 
+                value sound quality, being perfect for both studies and performances.
+                 </p>
+            <p><b>Price: ₱ 10,350.00</b></p>
+    <button onclick="addToCart('SX EE3-VS Les Paul Vintage Sunburst Electric Guitar', 10350.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <div class="product-image" style="background-image: url('Electric/electric\ 6.png');"></div>
+            <h2>SX EH3BK Deluxe Les Paul Style Electric Guitar<br>&nbsp;<br>&nbsp;</h2>
+            <p>An impressively stylish deluxe Les Paul style electric guitar from our friends at SX!<br>&nbsp;<br>&nbsp;
+                 </p>
+            <p><b>Price: ₱ 13,537.50</b></p>
+    <button onclick="addToCart('SX EH3BK Deluxe Les Paul Style Electric Guitar', 13537.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <div class="product-image" style="background-image: url('Electric/electric\ 7.png');"></div>
+            <h2>Fender America Professional II Stratocaster RW OWT </h2>
+            <p>The American Professional II Stratocaster® draws from more than sixty years of innovation, inspiration and evolution to meet 
+                the demands of today's working player.
+                 </p>
+            <p><b>Price: ₱ 104,025.00</b></p>
+    <button onclick="addToCart('Fender America Professional II Stratocaster RW OWT', 104025.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <div class="product-image" style="background-image: url('Electric/electric\ 8.png');"></div>
+            <h2>Fender American Vintage II 1966 Jazzmaster </h2>
+            <p> Built with period-accurate bodies, necks and hardware, premium finishes and meticulously voiced, year-specific pickups, 
+                each instrument captures the essence of authentic Fender craftsmanship and tone.
+                 </p>
+            <p><b>Price: ₱ 141,000.00</b></p>
+    <button onclick="addToCart('Fender American Vintage II 1966 Jazzmaster', 141000.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        
+
+    </section>
+
+ <!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+
+<!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+<script>
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+            function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+    //---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+         function updateCartCount() {
+             var cartCountElement = document.getElementById('cartCount');
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             var count = cart.length;
+        
+             cartCountElement.textContent = count;
+         }
+        
+         // Update cart count on page load
+         updateCartCount();
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function searchProducts() {
+    var searchInput = document.getElementById('searchBar').value.toLowerCase();
+    console.log("Search Query: ", searchInput);
+    localStorage.setItem('searchQuery', searchInput);
+    // Redirect to the searchResults.html page
+    window.location.href = 'acoustic guitars.html';
+    window.location.href = 'bass guitars.htm';
+    window.location.href = 'ukulele.html';
+    window.location.href = 'electric guitars.html';
+    window.location.href = 'accessories.html';
+    window.location.href = 'pedal.html';
+    window.location.href = 'amplifier.html';
+}
+    </script>
+    
+    </body>
+    </html>

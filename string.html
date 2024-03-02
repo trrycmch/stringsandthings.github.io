@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="index.html"><i class="fas fa-home"></i></a>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-box"></i> &nbsp;Products&nbsp;<i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="acoustic guitars.html">Acoustic Guitars</a>
+        <a href="electric guitars.html">Electric Guitars</a>
+        <a href="bass guitars.html">Bass Guitars</a>
+        <a href="ukulele.html">Ukulele</a>
+        <a href="amplifier.html">Amplifier</a>
+        <a href="pedal.html">Pedal Amplifier</a>
+        <a href="accessories.html">Accessories</a>
+    </div>
+  </div>  
+<a href="message.html"><i class="fas fa-envelope"></i></a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+    <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+    <h1>Strings</h1>
+    <section>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 5.png');"></div>
+            <h2>Fernando AGS-1048 Acoustic Guitar Steel Strings Set with Pick (Gauge Extra Light 10-48)</h2>
+                    <p>Fernando AGS-1048 Acoustic Guitar Steel Strings Set with Pick (Gauge Extra Light 10-48)</p>
+                    <p><b>Price: ₱ 112.50</b></p>
+            <button onclick="addToCart('Fernando NFCA Acoustic Guitar Strings Set (Light Gauge 12-53)', 112.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+       
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 4.png');"></div>
+            <h2>Fernando NFCA Acoustic Guitar Strings Set (Light Gauge 12-53)</h2>
+                    <p>Fernando NFCA Acoustic Guitar Strings Set (Light Gauge 12-53)</p>
+                    <p><b>Price: ₱ 187.50</b></p>
+            <button onclick="addToCart('Fernando NFCA Acoustic Guitar Strings Set (Light Gauge 12-53)', 187.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 6.png');"></div>
+            <h2>D'Addario EJ65TLG Pro-Arté Custom Extruded Nylon Tenor Ukulele Strings (Low-G)</h2>
+                    <p>he EJ65TLG Low-G Ukulele sets are designed for usage on tenor ukuleles. The 4th string is a silver-plated copper wound on nylon and complimented by 1st, 2nd and 
+                        3rd Pro-Arté Custom Extruded clear nylon strings.</p>
+                    <p><b>Price: ₱ 262.50</b></p>
+            <button onclick="addToCart('D’Addario EJ65TLG Pro-Arté Custom Extruded Nylon Tenor Ukulele Strings (Low-G)', 262.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessoies\ 7.png');"></div>
+            <h2>Ernie Ball 1697 100 Roundwound Bass String (Single)</h2>
+                    <p>Ernie Ball Slinky bass strings are round-wound for maximum clarity and serious punch. The list of endorsers for Ernie Ball Slinky bass strings reads like a who's who of modern rock bass.
+                         Made in the USA with specially formulated alloys for long life and maximum vibrancy. </p>
+                    <p><b>Price: ₱ 315.00</b></p>
+            <button onclick="addToCart('Ernie Ball 1697 100 Roundwound Bass String (Single)', 315.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 8.png');"></div>
+            <h2>Ernie Ball 1665 Nickel Wound Electric Bass Guitar String .065 (Single)</h2>
+                    <p>Made from nickel plated steel wire wrapped around tin plated hex shaped steel core wire providing a well balanced overall sound. Length: 48" / Taper: 37.25" </p>
+                    <p><b>Price: ₱ 450.00</b></p>
+            <button onclick="addToCart('Ernie Ball 1697 100 Roundwound Bass String (Single)', 450.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 10.png');"></div>
+            <h2>Fender 3250R Super Bullets Nickel Plated Electric Guitar Strings - Regular (10 - 46)</h2>
+                    <p>The 3250R guitar strings are perfect for rock and other styles 
+                        of music where the guitar needs to cut through. Fender's patented bullet-end creates a sonic coupling between the string and bridge block, for 
+                        rock-solid tuning, stability, and increased sustain.</p>
+                    <p><b>Price: ₱ 562.50</b></p>
+            <button onclick="addToCart('Fender 3250R Super Bullets Nickel Plated Electric Guitar Strings - Regular (10 - 46)', 562.500)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 9.png');"></div>
+            <h2>D'Addario NYXL1059 Regular Light 7-String Electric Guitar Strings</h2>
+                    <p>Made with a NY Steel core, premium nickel-plated steel wrap wire, and Fusion Twist technology, NYXL electric guitar strings are tough enough 
+                        and versatile enough to handle anything. Made for 7-string guitars, this 10-59 Regular Light gauge 
+                        set takes our most popular gauge and adds an additional bass string.</p>
+                    <p><b>Price: ₱ 675.00</b></p>
+            <button onclick="addToCart('DAddario NYXL1059 Regular Light 7-String Electric Guitar Strings', 675.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 1.png');"></div>
+            <h2>Martin 41Y23MK13 Kovar 6-String Medium Acoustic Guitar Strings</h2>
+                    <p>Luxe by Martin® Kovar strings deliver Superior Performance core with the unique benefits of Kovar wrap wire, a nickel-cobalt alloy.<br>&nbsp;</p>
+                    <p><b>Price: ₱ 900.00</b></p>
+            <button onclick="addToCart('Martin 41Y23MK13 Kovar 6-String Medium Acoustic Guitar Strings', 900.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessoies\ 2.png');"></div>
+            <h2>Martin 41Y23MK12 Kovar 6-String Light Acoustic Guitar Strings</h2>
+                    <p>Luxe by Martin® Kovar strings deliver Superior Performance core with the unique benefits of Kovar wrap wire, a nickel-cobalt alloy. 
+                        Featuring natural corrosion 
+                        resistance, clear and balanced tone, and voicing for enhanced attack and response.</p>
+                    <p><b>Price: ₱ 900.00</b></p>
+            <button onclick="addToCart('Martin 41Y23MK12 Kovar 6-String Light Acoustic Guitar Strings', 900.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 3.png');"></div>
+            <h2>Martin 41Y23MK11 Kovar 6-String Custom Light Acoustic Guitar Strings</h2>
+                    <p>Luxe by Martin® Kovar strings deliver Superior Performance core with the unique benefits of Kovar wrap wire, 
+                        a nickel-cobalt alloy.</p>
+                    <p><b>Price: ₱ 900.00</b></p>
+            <button onclick="addToCart('Martin 41Y23MK11 Kovar 6-String Custom Light Acoustic Guitar Strings', 900.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('accessories/accessories\ 11.png');"></div>
+            <h2>Ernie Ball 2810 Flatwound 5-String Electric Bass Strings (45-130)</h2>
+                    <p>Ernie Ball Flatwound Electric Bass Strings use flat stainless steel wire wrapped around a hex shaped tin plated steel core. Provides a smooth feel 
+                        and mellow sound. Gauges .045, .065, .080, .100 .130.</p>
+                    <p><b>Price: ₱ 2,662.50</b></p>
+            <button onclick="addToCart('Ernie Ball 2810 Flatwound 5-String Electric Bass Strings (45-130)', 2662.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+       
+
+    </section>
+
+ <!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+<script>
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+            function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+    //---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+         function updateCartCount() {
+             var cartCountElement = document.getElementById('cartCount');
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             var count = cart.length;
+        
+             cartCountElement.textContent = count;
+         }
+        
+         // Update cart count on page load
+         updateCartCount();
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function searchProducts() {
+    var searchInput = document.getElementById('searchBar').value.toLowerCase();
+    console.log("Search Query: ", searchInput);
+    localStorage.setItem('searchQuery', searchInput);
+    // Redirect to the searchResults.html page
+    window.location.href = 'acoustic guitars.html';
+    window.location.href = 'bass guitars.htm';
+    window.location.href = 'ukulele.html';
+    window.location.href = 'electric guitars.html';
+    window.location.href = 'accessories.html';
+    window.location.href = 'pedal.html';
+    window.location.href = 'amplifier.html';
+}
+    </script>
+    
+    </body>
+    </html>

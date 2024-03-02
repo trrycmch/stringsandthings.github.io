@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!-------------------------------------------------- Header --------------------------------------------------------------------->
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" alt="Logo" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="home.html"><i class="fas fa-home"></i> Home</a>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-box"></i> &nbsp;Products&nbsp;<i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="product.html">Acoustic Guitars</a>
+      <a href="electric.html">Electric Guitars</a>
+      <a href="bass.html">Bass Guitars</a>
+      <a href="ukulele.html">Ukulele</a>
+      <a href="amplifier.html">Amplifier</a>
+      <a href="spark.html">Pedal Amplifier</a>
+      <a href="accessories.html">Accessories</a>
+    </div>
+  </div> 
+<a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+<a href="message.html"><i class="fas fa-envelope"></i> Message</a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>s
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+     <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+
+            <!---------------------------------------- Add more products as needed -------------------------------------------------------->
+
+
+<!-------------------------------------------- Link to the Shopping Cart Page --------------------------------------------------------->
+<footer>
+    <p>&copy; STRING & THINGS</p>
+</footer>
+    <!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+    <script>
+//---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+        function addToCart(productName, price) {
+         var cart = JSON.parse(localStorage.getItem('cart')) || [];
+         cart.push({ name: productName, price: price });
+         localStorage.setItem('cart', JSON.stringify(cart));
+    
+         // Update cart count in the navigation bar
+         updateCartCount();
+     }
+//---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+     function updateCartCount() {
+         var cartCountElement = document.getElementById('cartCount');
+         var cart = JSON.parse(localStorage.getItem('cart')) || [];
+         var count = cart.length;
+    
+         cartCountElement.textContent = count;
+     }
+    
+     // Update cart count on page load
+     updateCartCount();
+//---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+function searchProducts() {
+        var searchInput = document.getElementById('searchBar').value.toLowerCase();
+        localStorage.setItem('searchQuery', searchInput);
+        // Redirect to the product.html page or any other page where you want to display search results
+        window.location.href = 'product.html';
+    }
+
+    // Update cart count on page load
+    updateCartCount();
+    </script>
+    
+    </body>
+    </html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="index.html"><i class="fas fa-home"></i></a>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-box"></i> &nbsp;Products&nbsp;<i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="acoustic guitars.html">Acoustic Guitars</a>
+      <a href="electric guitars.html">Electric Guitars</a>
+      <a href="bass guitars.html">Bass Guitars</a>
+      <a href="ukulele.html">Ukulele</a>
+      <a href="amplifier.html">Amplifier</a>
+      <a href="pedal.html">Pedal Amplifier</a>
+      <a href="accessories.html">Accessories</a>
+    </div>
+  </div> 
+<a href="message.html"><i class="fas fa-envelope"></i></a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+    <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+    <h1>Bass Guitar</h1>
+    <section>
+       
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 1.png');"></div>
+            <h2>SX SBM1/BG Blue Glow Jazz Bass Guitar </h2>
+                    <p>Electric and Bass Guitars on the market SX SBM guitars combine classic Bass guitar body shapes with bold modern and vibrant finishes to bring you 
+                        the best in electric guitar design with a very current look.<br>&nbsp;</p>
+                    <p><b>Price: ₱ 8,362.50</b></p>
+            <button onclick="addToCart('SX SBM1/BG Blue Glow Jazz Bass Guitar', 8362.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 2.png');"></div>
+            <h2>SX SPJ62+/3TS Electric Bass Guitar (3-Tone Sunburst)</h2>
+                    <p>Solid Alder body creates an authentic vintage sound. Dual cutaway body provides access to the upper frets. Contoured back for hours of 
+                        comfortable play.<br>&nbsp;</p>
+                    <p><b>Price: ₱ 9,000.00</b></p>
+            <button onclick="addToCart('SX SPJ62+/3TS Electric Bass Guitar (3-Tone Sunburst)', 9000.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 5.png');"></div>
+            <h2>SX SWB1 5-String Bass Guitar (Black)</h2>
+                    <p>The SX SWB1 5-string bass gives you the fat and punchy tone you demand plus excellent playability – all for an amazing low price. The SX SWB1 gives you the comfortable feel of 
+                        a compact body bass players everywhere have been raving about for decades. </p>
+                    <p><b>Price: ₱ 17,212.50</b></p>
+            <button onclick="addToCart('SX SWB1 5-String Bass Guitar (Black)', 17212.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 4.png');"></div>
+            <h2>SX SWB1/6 6 String Bass Guitar (Natural)</h2>
+                    <p>6-string electric bass guitar from the SWB1 series. The bass guitar has a mahogany body. It is equipped with a mahogany neck with a scale of 864 mm. 
+                        The rosewood fingerboard is equipped with 24 nickel frets and a zero fret made of bone. Gold hardware includes Die-Cast tuners and bridge.<br>&nbsp;</p>
+                    <p><b>Price: ₱ 17,250.00</b></p>
+            <button onclick="addToCart('SX SWB1/6 6 String Bass Guitar (Natural)', 17250.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 3.png');"></div>
+            <h2>Jackson JS23 JS Series Spectra Bass (Red Stain)</h2>
+                    <p>The Spectra Bass JS23's poplar body with large upper horn evenly distributes weight throughout the instrument, providing perfect balance 
+                        by reducing neck dive for hours of comfortable playing. A 12" radius bound laurel fingerboard with 24 frets sits atop the bolt-on maple neck, 
+                        which features a scarf joint design and speed neck contour.</p>
+                    <p><b>Price: ₱ 18,450.00</b></p>
+            <button onclick="addToCart('Jackson JS23 JS Series Spectra Bass (Red Stain)', 18450.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 10.png');"></div>
+            <h2>Jackson JS3Q JS Series Kelly Bird Bass Guitar (Transparent Blue Burst)</h2>
+                    <p>The Kelly Bird JS3Q four-string bass features a 34”-scale length, a lightweight poplar body with a quilt maple top, bolt-on maple neck with graphite reinforcement and scarf joint and a 12”-16” compound radius bound amaranth fingerboard with 21 jumbo frets and pearloid block inlays.</p>
+                    <p><b>Price: ₱ 22,575.00</b></p>
+            <button onclick="addToCart('Jackson JS3Q JS Series Kelly Bird Bass Guitar (Transparent Blue Burst) ', 22575.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 6.png');"></div>
+            <h2>Squier by Fender Classic Vibe 60's Precision Bass - Laurel - 3-Color Sunburst </h2>
+                    <p>A tribute to the decade that made the P Bass® an icon, the Classic Vibe ‘60s Precision Bass® embodies the aesthetics of the original 
+                        and produces massive tone courtesy of its Fender-Designed alnico split-coil pickup.<b>&nbsp;<br>&nbsp;<br>&nbsp;</b></p>
+                    <p><b>Price: ₱ 24,375.00</b></p>
+            <button onclick="addToCart('Squier by Fender Classic Vibe 60's Precision Bass - Laurel - 3-Color Sunburst ', 24375.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 9.png');"></div>
+            <h2>Jackson JS3VQ Concert Bass Guitar (Transparent Black)</h2>
+                    <p>The five-string Concert Bass JS3VQ is a 35”-scale model featuring a lightweight and resonant poplar body with an elegant quilt maple top, 
+                        fully bound bolt-on maple neck with graphite reinforcement and scarf joint, and a 12”-16” compound radius Amaranth fingerboard with 24 
+                        jumbo frets and classic sharkfin inlays.</p>
+                    <p><b>Price: ₱ 25,725.00</b></p>
+            <button onclick="addToCart('Jackson JS3VQ Concert Bass Guitar (Transparent Black)', 25725.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 7.png');"></div>
+            <h2>Fender Pau Ferro Player Jazz Bass</h2>
+                    <p>Player Series Single-Coil Jazz Bass Pickups with Alnico V Magnetic Pole Pieces. In more than half a century of Fender history and modern
+                         music history, there's really nothing like the timeless guttural growl and singing high end of a Jazz Bass, coming from a clear, 
+                         punchy and powerful-sounding pair of Fender Standard single-coil Jazz Bass pickups.</p>
+                    <p><b>Price: ₱ 37,462.50</b></p>
+            <button onclick="addToCart('Fender Pau Ferro Player Jazz Bass', 37462.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 8.png');"></div>
+            <h2>Fender Pau Ferro Player Jaguar Bass Sonic Red</h2>
+                    <p>Player Series Precision Bass and Jazz Bass Pickups with Alnico V Pole Pieces. Respecting our heritage while maintaining our 
+                        innovative spirit, the growling Player Series single-coil Jazz Bass bridge pickup is joined by a clear-sounding, fat Player 
+                        Series split-coil Precision Bass middle pickup for a one-two punch of seismic Fender bass tone.</p>
+                    <p><b>Price: ₱ 37,462.50</b></p>
+            <button onclick="addToCart('Fender Pau Ferro Player Jaguar Bass Sonic Red', 37462.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 12.png');"></div>
+            <h2>Fender Steve Harris Precision Bass Guitar</h2>
+                    <p> Harris has stayed true to his battle-hardened Precision Bass over the years, and his signature Steve Harris Precision 
+                        Bass now comes in his famously regal gloss White finish with special pinstriping, mirrored pickguard and West Ham United F.C. crest. <br>&nbsp;<br>&nbsp;</p>
+                    <p><b>Price: ₱ 56,212.50</b></p>
+            <button onclick="addToCart('Fender Steve Harris Precision Bass Guitar', 56212.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('bass/bass\ 11.png');"></div>
+            <h2>Fender Troy Sanders Signature Jaguar Bass</h2>
+                    <p>Alt-metal juggernaut Mastodon has always been anchored by the dexterous fast-and-heavy bass work of Troy Sanders. Fender and Sanders teamed 
+                        up to create the distinctive look and leviathan sound of the Troy Sanders Jaguar Bass.<br>&nbsp;<br>&nbsp;</p>
+                    <p><b>Price: ₱ 73,350.00</b></p>
+            <button onclick="addToCart('Fender Troy Sanders Signature Jaguar Bass', 73350.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+    </section>
+
+<!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+<!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+<script>
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+            function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+    //---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+         function updateCartCount() {
+             var cartCountElement = document.getElementById('cartCount');
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             var count = cart.length;
+        
+             cartCountElement.textContent = count;
+         }
+        
+         // Update cart count on page load
+         updateCartCount();
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function searchProducts() {
+    var searchInput = document.getElementById('searchBar').value.toLowerCase();
+    console.log("Search Query: ", searchInput);
+    localStorage.setItem('searchQuery', searchInput);
+    // Redirect to the searchResults.html page
+    window.location.href = 'acoustic guitars.html';
+    window.location.href = 'bass guitars.htm';
+    window.location.href = 'ukulele.html';
+    window.location.href = 'electric guitars.html';
+    window.location.href = 'accessories.html';
+    window.location.href = 'pedal.html';
+    window.location.href = 'amplifier.html';
+}
+    </script>
+    
+    </body>
+    </html>

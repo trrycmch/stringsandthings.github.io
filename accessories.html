@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesaccessories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="index.html"><i class="fas fa-home"></i></a>
+<a href="acoustic guitars.html"><i class="fas fa-guitar"></i></a>
+<div class="dropdown">
+    <button class="dropbtn">&nbsp;Accessories&nbsp;<i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="#straps">Straps</a>
+<a href="string.html">Strings</a>
+<a href="#tuners">Tuners</a>
+<a href="#stands">Stands</a>
+<a href="#bags">Bags & Cases</a>
+<a href="#capos">Capos</a>
+<a href="#picks">Picks</a>
+    </div>
+  </div>  
+<a href="message.html"><i class="fas fa-envelope"></i></a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+    <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+    <h1>Straps</h1>
+    <section id="straps" class="accessory-section">
+    </section>
+
+    <h1>Tuners</h1>
+    <section id="tuners" class="accessory-section">
+    </section>
+
+    <h1>Stands</h1>
+    <section id="stands" class="accessory-section">
+    </section>
+
+    <h1>Bags & Cases</h1>
+    <section id="bags" class="accessory-section">
+    </section>
+
+    <h1>Capos</h1>
+    <section id="capos" class="accessory-section">
+    </section>
+
+    <h1>Picks</h1>
+    <section id="picks" class="accessory-section">
+    </section>
+
+    <!-----------------------------------------------ADD TO CART ------------------------------------------------------------------>
+
+    <div id="accessoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+            <button id="addToCartBtn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+
+<!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+
+<!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+<script>
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+            function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+             if (selectedAccessory) {
+        cart.push(selectedAccessory);
+        alert('Added to Cart!');
+        closeAccessoryModal();
+    } else {
+        alert('Please select an accessory first.');
+    }
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+
+    //---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+         function updateCartCount() {
+             var cartCountElement = document.getElementById('cartCount');
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             var count = cart.length;
+        
+             cartCountElement.textContent = count;
+         }
+        
+         // Update cart count on page load
+         updateCartCount();
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function openCart() {
+    const cartModal = document.getElementById('cartModal');
+    const cartItemsList = document.getElementById('cartItems');
+
+    cartItemsList.innerHTML = '';
+
+    if (cart.length === 0) {
+        cartItemsList.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.name} - $${item.price}`;
+            cartItemsList.appendChild(listItem);
+        });
+    }
+
+    cartModal.style.display = 'block';
+}
+
+function closeCart() {
+    const cartModal = document.getElementById('cartModal');
+    cartModal.style.display = 'none';
+}
+
+function checkout() {
+    alert('Checkout functionality would be implemented here.');
+}
+
+function closeAccessoryModal() {
+    const modal = document.getElementById('accessoryModal');
+    modal.style.display = 'none';
+}
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function searchProducts() {
+    var searchInput = document.getElementById('searchBar').value.toLowerCase();
+    console.log("Search Query: ", searchInput);
+    localStorage.setItem('searchQuery', searchInput);
+    // Redirect to the searchResults.html page
+    window.location.href = 'acoustic guitars.html';
+    window.location.href = 'bass guitars.htm';
+    window.location.href = 'ukulele.html';
+    window.location.href = 'electric guitars.html';
+    window.location.href = 'accessories.html';
+    window.location.href = 'pedal.html';
+    window.location.href = 'amplifier.html';
+}
+//-----------------------------------------------ACCESSORIES DATA-----------------------------------------------------------------------//
+const accessoriesData = {
+    straps: [
+        { name: 'Fender 2-inch Essential Leather Guitar Strap - Black', price: 937.50, details: 'The Essentials Leather Strap is the ideal solution for classic comfort and style. Crafted from durable leather, this strap offers a comfortable feel and is fully adjusted from 44.5" to 53" long.<br> Available colors: Black, Red, Brown, Tan', imageUrl: 'straps/strap 1.png' },
+        { name: 'D’Addario Planet Waves 50BAL01 Auto Lock Bass Guitar Strap (Black Padded Stripes)', price: 1087.50, details: 'The D’Addario Auto Lock Guitar Strap is the simplest integrated strap locking system for your performance. Simply slide the strap end over the guitar strap buttons and you are locked in - it’s that easy.', imageUrl: 'straps/strap 5.png' },
+        { name: 'Fender Tom Delonge to the Stars Guitar Strap - Daphne Blue', price: 1125.00, details: 'Inspired by the distinct colorways of his iconic signature Strat® models, the Tom DeLonge To The Stars collection features designs in collaboration with the unique aesthetic of both brands. Available colors: Daphne Blue, Black, Surf Green, Retro Bolt ', imageUrl: 'straps/strap 2.png' },
+        { name: 'Fender Winter Camo 2-Inch Guitar Strap', price: 1125.00, details: 'Adjustable from 34”-59” in length so it fits players of any stature, it’s available in two popular camo pattern options, Woodland and Winter camo.', imageUrl: 'straps/strap 4.png' },
+        { name: 'Fender George Harrison Rocky Polyester Guitar Strap', price: 1387.50, details: 'Featuring a psychedelic multi-color design, this fully adjustable strap is the perfect pair to the one-of-a-kind Strat.', imageUrl: 'straps/strap 3.png' },
+        { name: 'Gretsch Vibrato Arm Pattern Guitar Strap - Black/Gold', price: 1425.00, details: 'This poly strap features the Gretsch logo with vibrato arm graphic. Leather ends with embossed logo. Available colors: Black/Gold, Black/Purple, Black/Red', imageUrl: 'straps/strap 6.png' },
+        { name: 'D’Addario Planet Waves 25LB07 Beatles Abbey Road 2.5 inch Guitar Strap', price: 1650.00, details: 'The Planet Waves 25LB07 Beatles Strap Collection Leather Guitar Strap Abbey Road features a high-resolution Abbey Road graphic design based on historical Beatles artwork. This strap celebrates the music and artistry of the band. Design printed on 2.5” wide smooth leather.', imageUrl: 'straps/strap 7.png' },
+        { name: 'D’Addario Planet Waves 25LB03 Beatles Help Guitar Strap', price: 1650.00, details: 'The Beatles heavily influenced music and culture. Now, as you play your music on the guitar, honor one of the greatest bands of all time. D’Addario (formerly Planet Waves) honors the Beatles’ legacy, essence and enduring spirit with the artwork on these guitar accessories.', imageUrl: 'straps/strap 8.png' },
+    ],
+
+    //-----------------------------------------------TUNERS-----------------------------------------------------------------------//
+    tuners: [
+        { name: 'D’Addario Planet Waves PW-CT-17BK Eclipse Black Guitar Tuner', price: 675.00, details: 'This black D’Addario Eclipse Tuner from Planet Waves offer fast, accurate tuning on and off the stage. The clip-on tuner features a full-color display, auto power-off, and pitch calibration is a discrete compact design. The unit offers a vertical orientation of the display for intuitive visualization, while the dual swivel function provides viewing at any angle.Available Colors: Black, Purpe', imageUrl: 'tuner/tuner1.png' },
+        { name: 'Cherub WST-900 Digital Tuner', price: 825.00, details: 'The Cherub WST-900A Clip Evo Tuner is a tuner with ultra wide and bright LCD display.', imageUrl: 'tuner/tuner2.png' },
+        { name: 'D’Addario PW-CT-26 Nexxus 360 Tuner', price: 1350.00, details: 'D’Addario’s rechargeable Nexxus 360™ guitar headstock tuner offers fast, accurate tuning without the cost and hassle of replacing batteries. The discreet, clip-on design features 360-degree rotation, plus a super bright, full color LED display, assuring a perfect viewing angle and screen clarity in any lighting. Simply plug the supplied USB cable into any USB power device as needed and enjoy 24 hours of tuning time per charge.', imageUrl: 'tuner/tuner3.png' },
+        { name: 'Cherub WST-552GB Chromatic Guitar And Bass Tuner', price: 562.50, details: 'Cherub WST-552GB Chromatic Guitar And Bass Tuner - Suitable for all guitars. Built in microphone and line in for electric guitar input or pickup input. Ideal for tuning in noisy environments.', imageUrl: 'tuner/tuner4.png' },
+
+    ],
+
+    //-----------------------------------------------STANDS-----------------------------------------------------------------------//
+    stands: [
+        { name: 'Hercules GS523B Plus Multi-Guitar Stand Rack For Up to 3 Guitars', price: 3937.50, details: 'The GS523B PLUS HERCULES Multi-Guitar Rack with add-on casters accommodates three guitars and utilizes Specially Formulated Foam (SFF) padding to cover all contact points. HA205 allows expansion to accommodate up to 6 guitars.', imageUrl: 'stand1.png' },
+        { name: 'Hercules GS525B Plus Multi Guitar Stand Rack For Up to 5 Guitars', price: 4612.50, details: 'The Hercules Multi-Guitar Rack GS525B accommodates five guitars with Specially Formulated Foam (SFF) rubber covering all contact points. Expands with HA205 and will accommodate up to 10 guitars.', imageUrl: 'stand2.png' },
+        { name: 'Hercules GS523B Guitar Display Rack For 3 Pcs', price: 3450.00, details: 'EThe Hercules Stands GS523B is a portable guitar rack that keeps three of your favorite guitars safely racked and ready to play. Perfect for stage studio, or home, the GS523B accommodates acoustic, electric, and bass guitars. Specially formulated foam covers all contact points, separating your guitars and safeguarding them from contact damage with other instruments in the rack.', imageUrl: 'stand3.png' },
+        { name: 'Hercules GS414B Guitar Stand', price: 1500.00, details: 'The Hercules GS414B Guitar stand features the Auto Grip system, easy height adjustment, and SFF rubber on all contact points, including the legs.', imageUrl: 'stand4.png' },
+
+    ],
+//-----------------------------------------------BAGS-----------------------------------------------------------------------//
+    bags: [
+        { name: 'CNB CB1880E Gigbag for Electric Guitar', price: 2550.00, details: 'A quality gigbag with 20 mm padding for an electric guitar in a gray design made of solid fabric. It is characterized by high durability and long life, which is ensured by quality YKK zippers. It contains several compartments for accessories, a soft plush inner part that protects your instrument, a guitar neck rest with Velcro, comfortable ergonomic back straps and two hand grips.', imageUrl: 'case1.png' },
+        { name: 'Jackson Economy Guitar Gig Bag Rhoads/King V /Kelly', price: 2887.50, details: 'Protect your guitar investment with our Jackson Economy Gig Bags.', imageUrl: 'case2.png' },
+        { name: 'Gretsch G2168 Jet Baritone - Jr Jet Bass Gig Bag', price: 2212.50, details: 'The Gretsch G2168 is a custom gig bag designed for Gretsch guitars. The G2168 gig bag is built to last.', imageUrl: 'case3.png' },
+        { name: 'PGretsch G2188 Folk / Rancher Jr / Orchestra Acoustic Guitar Bag', price: 3225.00, details: 'The Gretsch G2188 Gig bags designed specifically for Gretsch Acoustic series instruments, features include: a tan 600 Denier exterior with 15 mm thick premium internal foam padding, an exterior pocket and padded backpack style shoulder straps.', imageUrl: 'case4.png' },
+        { name: 'Jackson JS Bass Guitar Gig Bag (Black)', price: 3000.00, details: 'The JS Bass Gig Bag from Jackson is a stylish, durable soft case that keeps your prized bass protected from the dust and dings of getting to and from the gig. Two exterior pockets are ideal for gig accessories like strings and cables. JS Bass owners here at Sweetwater trust this bag for its quality protection', imageUrl: 'case5.png' },
+        { name: 'Gretsch G2162 Hollowbody Electric Guitar Gig Bag - Black', price: 3900.00, details: 'The Gretsch G2162 is a custom gig bag designed for Gretsch hollowbody guitars.', imageUrl: 'case6.png' },
+        { name: 'Gretsch G2164 Padded Gig Bag for Electromatic Solid Body Guitar - Black', price: 2587.50, details: 'The Gretsch G2164 padded gig bag is designed to carry Gretsch Electromatic solid body electric guitars.', imageUrl: 'case7.png' },
+        { name: 'SKB 1SKB-SC18 Acoustic Dreadnought Guitar Soft Case', price: 4725.00, details: 'SKB’s 1SKB-SC18 guitar soft case offers your dreadnought acoustic guitar the protection of a hard case plus the portability of a gig bag - all for a great low price The 1SKB-SC18 gives you the same rigid foam you’ll find in SKB’s hardshell cases, plus a plush-lined interior that’s shaped to securely fit you guitar. A sealed nylon exterior with both handles and straps makes the 1SKB-SC18 both easy to carry and weather resistant. It even gives you convenient zippered pouches with multiple compartments for your accessories! Combining hardshell-style protection and gig bag-style portability, you really get the best of both worlds for your dreadnought style acoustic guitar with an SKB 1SKB-SC18 electric guitar soft case.', imageUrl: 'case8.png' },
+        { name: 'SKB 1SKB-SC66 Rectangular Electric Guitar Case', price: 5137.50, details: 'SKB’s 1SKB-SC66 electric guitar soft case offers your electric guitar the protection of a hard case plus the portability of a gig bag - all for a great low price.', imageUrl: 'case9.png' },
+
+    ],
+//-----------------------------------------------CAPOS-----------------------------------------------------------------------//
+    capos: [
+        { name: 'Kala Walnut Ukelele Capo (K-CAPO-WLT FAUX)', price: 300.00, details: 'Durable, easy to use, and stylish, our new Capos will fit any size ukulele. Available: Walnut Ukelele Capo, Beechwood Ukelele Capo, Black', imageUrl: 'capo1.png' },
+        { name: 'PD’Addario Planet Waves PWCP-09 Tri Action Capo', price: 1035.00, details: 'Designed for use on 6-string electric and acoustic guitars, the black NS Tri-Action Capo assures buzz-free, in-tune performance at any fret.', imageUrl: 'capo2.png' },
+        { name: 'Ernie Ball 9602 Axis Bronze Universal Guitar Capo', price: 675.00, details: 'The Ernie Ball Axis Capo’s ergonomic features allow for fast and accurate single-handed key changes. A dual-radius design conforms to flat or curved fretboards, ensuring buzz-free operation on 6 or 7 string electric and acoustic guitars.', imageUrl: 'capo3.png' },
+    ],
+//-----------------------------------------------PICKS-----------------------------------------------------------------------//
+    picks: [
+        { name: 'Fender 351 Wrangler x Fender Guitar Picks - Tortoiseshell (8 pack)', price: 487.50, details: 'A little bit country, a little bit rock ’n’ roll, our collaboration with the iconic denim label pays homage to daring artists and the denim that shaped their style for decades.', imageUrl: 'pick1.png' },
+        { name: 'Fender 346 Dura Tone Derlin Guitar Picks - Fiesta Red (12 Pack)', price: 375.00, details: 'This durable pick is crafted from extruded Delrin, in several classic Fender colors, with a matte finish for improved grip. Long-lasting and durable, Delrin has a stiffer feel than celluloid, which gives a strong, well defined attack to every stroke. Ideal for any playing style or technique, our symmetrical 346 shape sports three playing edges for longer life while the large body produces fat, smooth tone. Available Colors: Red, Black', imageUrl: 'pick2.png' },
+        { name: 'Planet Waves 1CWH6-10B1 Revolver Guitar Picks (Albums 10 pack, Heavy)', price: 300.00, details: 'Beatles Picks-Revolver Guitar Picks From Love Me Do to Revolution, the Beatles were arguably the most creative, diverse and influential band in pop music history.', imageUrl: 'pick3.png' },
+        { name: 'D’Addario JSCD-01 Joe Satriani Chrome Dome Guitar Picks', price: 300.00, details: 'The Joe Satriani Chrome Dome Pick, by D’Addario, is made of stainless steel which allows the player to create new and exciting sounds during leads. This package also comes with 4, medium gauge, celluloid picks designed by Joe himself.', imageUrl: 'pick4.png' },
+        { name: 'D’Addario Planet Waves 1CAB4-15BT1 The Beatles Classic Logo Guitar Picks Tins (Medium Gauge, 15-Pack)', price: 450.00, details: 'The Beatles Guitar Pick Tins feature 15 guitar picks from the "Meet The Beatles," Classic Albums, and "Revolver" guitar pick packs. All in medium gauge celluloid guitar picks in a tin with 3 unique designs.', imageUrl: 'pick5.png' },
+        { name: 'D’Addario Planet Waves 1CBK6-10JS Joe Satriani Guitar Picks (Heavy)', price: 33.75, details: 'JS Design picks are made of premium celluloid and feature 10 different Joe Satriani original designs.', imageUrl: 'pick6.png' },
+    ],
+    // Add data for other categories
+};
+let selectedAccessory = null;
+let cart = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+    populateAccessories('straps');
+    populateAccessories('tuners');
+    populateAccessories('stands');
+    populateAccessories('bags');
+    populateAccessories('capos');
+    populateAccessories('picks');
+});
+
+function populateAccessories(category) {
+    const accessorySection = document.getElementById(category);
+
+    accessoriesData[category].forEach(accessory => {
+        const accessoryElement = createAccessoryElement(accessory);
+        accessorySection.appendChild(accessoryElement);
+
+        accessoryElement.addEventListener('click', () => {
+            selectedAccessory = accessory;
+            displayAccessoryModal(accessory);
+        });
+    });
+}
+
+function createAccessoryElement(accessory) {
+    const accessoryElement = document.createElement('div');
+    accessoryElement.classList.add('accessory');
+    accessoryElement.innerHTML = `
+        <img src="${accessory.imageUrl}" alt="${accessory.name}" style="max-width: 100%;">
+        <h3>${accessory.name}</h3>
+        <p>Price: ₱${accessory.price}</p>
+    `;
+    return accessoryElement;
+}
+
+function displayAccessoryModal(accessory) {
+    const modalContent = document.getElementById('modalContent');
+    modalContent.innerHTML = `
+        <img src="${accessory.imageUrl}" alt="${accessory.name}" style="max-width: 100%;">
+        <h2>${accessory.name}</h2>
+        <p>Price:  ₱${accessory.price}</p>
+        <p>${accessory.details}</p>
+    `;
+
+    const modal = document.getElementById('accessoryModal');
+    const closeBtn = document.getElementsByClassName('close')[0];
+
+    modal.style.display = 'block';
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}
+
+
+    </script>
+    
+    </body>
+    </html>

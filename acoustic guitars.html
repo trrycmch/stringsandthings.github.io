@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="index.html"><i class="fas fa-home"></i></a>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-box"></i> <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="acoustic guitars.html">Acoustic Guitars</a>
+      <a href="electric guitars.html">Electric Guitars</a>
+      <a href="bass guitars.html">Bass Guitars</a>
+      <a href="ukulele.html">Ukulele</a>
+      <a href="amplifier.html">Amplifier</a>
+      <a href="pedal.html">Pedal Amplifier</a>
+      <a href="accessories.html">Accessories</a>
+    </div>
+  </div> 
+<a href="message.html"><i class="fas fa-envelope"></i> </a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+    <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+    <h1><i class="fas fa-guitar"></i> Acoustic Guitars&nbsp;<i class="fas fa-guitar"></i></h1>
+    <section>
+        <div class="product">
+            <div class="product-image" style="background-image: url('https://drive.google.com/thumbnail?id=14hz3ySPn-zBd4Tu3NtY1F05LSGdFfWvp-xVpDSqmwhT5bg4UvUxT2saHB6zB4iH1');"></div>
+            <h2>Valencia VC204TWR Series 4/4 Size 6-String Classical Acoustic Guitar</h2>
+            <p>The perfect guitar for beginners, the Valencia Series 200 is manufactured to Valencia's exacting standards in their own factory in Indonesia.
+                 The Series 200 starts with a sitka spruce top, nato body and jabon neck for balanced tone. 
+                 </p>
+            <p><b>Price: ₱ 3,075.00</b></p>
+    <button onclick="addToCart('Valencia VC204TWR Series 4/4 Size 6-String Classical Acoustic Guitar', 3075.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 11.png');"></div>
+            <h2>SX SD104BK Dreadnought Acoustic Guitar (Black)<br>&nbsp;</h2>
+            <p>SX guitars are the most successful guitars you can buy when it comes to price and performance. 
+                From stunning, handcrafted custom guitars to affordable standard series, you'll find the right guitars for 
+                every musician within the SX brand.</p>
+            <p><b>Price: ₱ 3,200.00</b></p>
+    <button onclick="addToCart('SX SD104BK Dreadnought Acoustic Guitar (Black)', 3200.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 13.png');"></div>
+            <h2>SX SO104GBK Auditorium Acoustic Guitar (Gloss Black)</h2>
+            <p>The SX SO-104 is a 25.5" scale Dreadnought acoustic guitar with basswood top, basswood back and sides.<br>&nbsp;<br>&nbsp; </p>
+            <p><b>Price: ₱ 4,387.50</b></p>
+            <button onclick="addToCart('SX SO104GBK Auditorium Acoustic Guitar (Gloss Black)', 4387.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 10.png');"></div>
+            <h2>Bromo BAT2M Tahoma Series Auditorium Solid Mahogany</h2>
+            <p>CBromo Guitars are 100% made in their own custom built factory in Surabaya, Indonesia. 
+                Resources of 3 generations the state-of-the-art 
+                workshop blends cutting-edge technology with lifelong craftsmen's skills. </p>
+            <p><b>Price: ₱ 7,200.00</b></p>
+    <button onclick="addToCart('Bromo BAT2M Tahoma Series Auditorium Solid Mahogany', 7200.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 1.png');"></div>
+            <h2>Cordoba C5-CET |Thin-Body Solid Top Classical Guitar</h2>
+            <p> A lightweight adjustable truss rod is built into the neck for stability. 
+                Available in Natural finish with solid Engelmann Spruce top.<br>&nbsp;</p>
+            <p><b>Price: ₱ 18,526.00</b></p>
+            <button onclick="addToCart('Cordoba C5-CET |Thin-Body Solid Top Classical Guitar', 18526.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 2.png');"></div>
+            <h2>Cordoba GK Studio | Negra Classical Guitar </h2>
+            <p> Made for the stage, the GK Studio is constructed with a slightly thinner body depth, neck, and nut
+                 width than a traditional Spanish guitar.<br>&nbsp;<br>&nbsp;</p>
+            <p><b> ₱ 18,526.00</b></p>
+            <button onclick="addToCart('Cordoba GK Studio | Negra Classical Guitar', 18526.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 6.png');"></div>
+            <h2>FENDER CD-60 V3 Dreadnought - Natural </h2>
+            <p>It provides nicely balanced tone and plenty of volume thanks to its dreadnought body 
+                style and spruce top with scalloped "X" bracing.</p>
+            <p><b>Price: ₱ 20,105.29</b></p>
+    <button onclick="addToCart('FENDER CD-60 V3 Dreadnought - Natural', 20105.29)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 7.png');"></div>
+            <h2>CD-60S EXOTIC DAO DREADNOUGHT </h2>
+            <p>High-quality affordable dreadnought with great tone and excellent playability.<br>&nbsp;<br>&nbsp; </p>
+            <p><b>Price: ₱ 22,105.29</b></p>
+    <button onclick="addToCart('CD-60S EXOTIC DAO DREADNOUGHT ', 22105.29)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 3.png');"></div>
+            <h2>CORDOBA Protégé | C1M Classical Guitar</h2>
+            <p>C1M models feature premium Savarez strings and an adjustable truss rod for lifetime neck stability.<br>&nbsp;</p>
+            <p><b> ₱ 33,325.92</b></p>
+            <button onclick="addToCart('CORDOBA Protégé | C1M Classical Guitar', 33325.92)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 9.png');"></div>
+            <h3>Acoustic Guitar 7/8 Coco x Cordoba | Disney Pixar Remember Me Miguel w/ soft case</h3>
+                    <p> Built with a spruce top, mahogany back and sides and durable satin finish, the Coco Guitar sounds clear, 
+                        warm and melodic, just like the guitars in the film. Its soft nylon strings are perfect for beginners and 
+                        its smaller body (7/8 size) is comfortable to hold and play. <br></p>
+                    <p><b>Price: ₱ 38,833.31</b></p>
+            <button onclick="addToCart('Acoustic Guitar 7/8 Coco x Cordoba', 38833.31)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Guitars/guitar\ 8.png');"></div>
+            <h2>COLE CLARK FAT QUEENSLAND MAPLE ACOUSTIC ELECTRIC GUITAR</h2>
+            <p>Cole Clark guitars are made with all solid timber using mostly native Australian 
+                tone woods that are largely sustainable. <br>&nbsp;<br>&nbsp;</p>
+            <p><b>Price: ₱ 68,182.39</b></p>
+    <button onclick="addToCart('COLE CLARK FAT QUEENSLAND MAPLE ACOUSTIC ELECTRIC GUITAR', 58182.39)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        
+        
+
+    </section>
+
+  <!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+
+<!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+<script>
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+            function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+    //---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+         function updateCartCount() {
+             var cartCountElement = document.getElementById('cartCount');
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             var count = cart.length;
+        
+             cartCountElement.textContent = count;
+         }
+        
+         // Update cart count on page load
+         updateCartCount();
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function searchProducts() {
+    var searchInput = document.getElementById('searchBar').value.toLowerCase();
+    console.log("Search Query: ", searchInput);
+    localStorage.setItem('searchQuery', searchInput);
+    // Redirect to the searchResults.html page
+    window.location.href = 'acoustic guitars.html';
+    window.location.href = 'bass guitars.htm';
+    window.location.href = 'ukulele.html';
+    window.location.href = 'electric guitars.html';
+    window.location.href = 'accessories.html';
+    window.location.href = 'pedal.html';
+    window.location.href = 'amplifier.html';
+}
+    </script>
+    
+    </body>
+    </html>

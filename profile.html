@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+</header>
+<body>
+<!---------------------------------------------------------- CONTENT -------------------------------------------------------->
+<section class="login-section">
+    <div class="login-container">
+        <div class="icon">
+            <img src="logo 6.png" alt="Your Icon">
+        </div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm" action="login.php" method="post">
+                <label for="username"><i class="fas fa-user" aria-placeholder="Type your email/username"></i> Email/Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password"><i class="fas fa-lock" aria-placeholder="Type your password"></i> Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit"><a href="index.html" style=color:white><i class="fas fa-sign-in-alt"></i>&nbsp;Log In</a></button>
+            </form>
+            <p><a href="signup.html" style=color:#444> Don't have an account? Sign Up</a></p>
+        </div>
+    </div>
+</section>
+<!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+</body>
+
+<!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+
+   <!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+   <script>
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+            function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+    //---------------------------------------------------FORM------------------------------------------------------------------------//
+    function toggleForm() {
+        const loginForm = document.querySelector('.login-form');
+        const signupForm = document.querySelector('.signup-form');
+
+        if (loginForm.style.display !== 'none') {
+            loginForm.style.transform = 'translateY(-20px)';
+            loginForm.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.2)';
+            loginForm.addEventListener('transitionend', function() {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+                setTimeout(() => {
+                    signupForm
+
+
+
+
+
+    </script>
+    
+    </body>
+    </html>

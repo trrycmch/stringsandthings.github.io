@@ -1,0 +1,209 @@
+/*------------------------------------------------------------------ICON--------------------------------------------------------*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+  /*---------------------------------------------------------------LOG IN SECTION----------------------------------------------------------*/
+
+  .login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position:relative;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(45deg, #4caf50, #ffffff, #4caf50);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s infinite linear;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 500px;
+    width: 300%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-form, .signup-form {
+    padding: 40px;
+}
+
+.login-form h2, .signup-form h2 {
+    text-align: center;
+    color: #444;  /* Updated color to #444 */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 12px;
+    color: #444;  /* Updated color to #444 */
+    font-size: 16px;
+}
+
+input {
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+input::placeholder {
+    color: #444;}
+
+input:focus {
+    border-color: #4caf50;
+}
+
+button {
+    padding: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px 5px 5px 5px;
+}
+button:hover {
+  background-color: #555; 
+  transform: scale(1.1); 
+}
+
+p {
+    text-align: center;
+    margin-top: 16px;
+    color: #444; 
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+p:hover {
+    color: #4caf50;
+}
+
+.icon {
+    text-align: center;
+    margin-bottom: -60px;
+}
+
+.icon img {
+    width: 200px;
+    height: 150px;
+    margin-top: 25px;
+
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*---------------------------------------------------------------SIGN UP FORM-------------------------------------------------------------*/
+.signup-form h2 {
+    color: #444; /* Updated color to #444 */
+}
+/*------------------------------------------------------------------FOOTER-------------------------------------------------------------*/
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+    display: inline-block; /* Added to enable animation */
+}
+
+/* Update the icon styles to use Font Awesome classes */
+.social-icons a i {
+    font-size: 20px;
+    display: block; /* Added to enable animation */
+}
+
+.social-icons a:hover {
+    color: orange; /* Change the color to the desired hover color */
+}
+
+/* Animation for the icons */
+.social-icons a:hover i {
+    animation: scaleIcon 0.3s ease-in-out; /* Customize animation duration and easing as needed */
+}
+
+@keyframes scaleIcon {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 1px;
+  background: linear-gradient(to right,  #444, #555, #49617a);
+  color: white;
+  font-size: 13px;
+  width: 100%;
+}
+h5{
+  font-size: 12px;
+margin-top: 10px;
+}

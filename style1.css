@@ -1,0 +1,234 @@
+
+/*------------------------------------------------------------------ICON--------------------------------------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #333;
+    transition: background-color 0.5s;
+}
+    
+/*---------------------------------------------------------------HEADER-------------------------------------------------------------*/
+header {
+    background: linear-gradient(to right, #444, #555, #777);
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    position: relative;
+}
+
+h2{
+    color:whitesmoke;
+}
+.animated-text{
+    font-size: 20px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.animated-text span{
+    position: relative;
+}
+.animated-text span::before{
+    content: " Strings & Things";
+    color:orange;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 100%;
+    background-color:linear-gradient(to right, #444, #555, #777);
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s stops(14) infinite;
+}
+/*---------------------------------------------------------------String & Things -------------------------------------------------------------*/
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes  slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes  slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/*---------------------------------------------------------------FEATURED PRODUCTS----------------------------------------------------------*/
+.featured-products {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.products-container {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.featured-products .product-card {
+    margin-bottom: 20px;
+}
+
+.featured-products img {
+    width: 90%;
+    align-items: center;
+    margin-left: 33px;
+    margin-top: 30px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+.product-card{
+    height: 101%;
+}
+.product-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+/*-------------------------------------------------------------NEWSLETTER ----------------------------------------------------*/
+.newsletter{
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    background: linear-gradient(to right,  #444, #555, #777);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: -1000px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #444, #577698);
+}
+/*-------------------------------------------------------------CATEGORY SECTION ----------------------------------------------------*/
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 1px;
+    justify-content: center;
+  }
+  
+  .category img {
+    max-width: 95%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /*------------------------------------------------- Dynamic Scrolling Effect--------------------------------------------------------- */
+  .scrolling-effect {
+    transition: background-color 0.5s ease;
+  }
+  
+  .scrolling-effect.scrolled {
+    background-color: #333;
+    color: white;
+  }
+
+/*------------------------------------------------------------------FOOTER-------------------------------------------------------------*/
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+    display: inline-block; /* Added to enable animation */
+}
+
+/* Update the icon styles to use Font Awesome classes */
+.social-icons a i {
+    font-size: 20px;
+    display: block; /* Added to enable animation */
+}
+
+.social-icons a:hover {
+    color: orange; /* Change the color to the desired hover color */
+}
+
+/* Animation for the icons */
+.social-icons a:hover i {
+    animation: scaleIcon 0.3s ease-in-out; /* Customize animation duration and easing as needed */
+}
+
+@keyframes scaleIcon {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 1px;
+    background: linear-gradient(to right,  #444, #555, #49617a);
+    color: white;
+    font-size: 13px;
+    width: 100%;
+  }
+  h5{
+    font-size: 12px;
+  margin-top: 10px;
+  }

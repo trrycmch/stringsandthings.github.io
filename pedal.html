@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="index.html"><i class="fas fa-home"></i></a>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-box"></i> &nbsp;Products&nbsp;<i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="acoustic guitars.html">Acoustic Guitars</a>
+        <a href="electric guitars.html">Electric Guitars</a>
+        <a href="bass guitars.html">Bass Guitars</a>
+        <a href="ukulele.html">Ukulele</a>
+        <a href="amplifier.html">Amplifier</a>
+        <a href="pedal.html">Pedal Amplifier</a>
+        <a href="accessories.html">Accessories</a>
+    </div>
+  </div> 
+<a href="message.html"><i class="fas fa-envelope"></i></a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+    <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+    <h1>Pedal Amplifier</h1>
+    <section>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 5.png');"></div>
+            <h2>TC ELECTRONIC POLYTUNE 3 MINI NOIR IN BLACK</h2>
+                    <p>A compact, fast and accurate tuner is the foundation of your pedalboard. The TC Electronic Polytune 3 Mini takes things further with a built-in Bonafide Buffer to keep your tone crisp.</p>
+                    <p><b>Price: ₱ 4,866.76</b></p>
+            <button onclick="addToCart('TC ELECTRONIC POLYTUNE 3 MINI NOIR IN BLACK', 4866.76)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 6.png');"></div>
+            <h2>ANIMALS PEDALS BATH TIME REVERB</h2>
+                    <p>Animals Pedals boast some of the quirkiest effects in the business! Featuring custom illustrated graphics and some truly memorable product names, the 
+                        Animals Pedals range has something for everyone. Better still, Animals Pedals are solidly built using quality components, all the while
+                         remaining at a price point that is accessible to the average musician.
+
+                    </p>
+                    <p><b>Price: ₱ 6,982.74</b></p>
+            <button onclick="addToCart('ANIMALS PEDALS BATH TIME REVERB', 6982.74)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+       
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 1.png');"></div>
+            <h2>TC ELECTRONIC AMPWORX VINTAGE SERIES COMBO DELUXE 65' PREAMP PEDAL </h2>
+                    <p>The rich tone of an iconic mid-'60s Fender tube combo in an affordable & compact package! Features 2 channels, built-in spring reverb, official Celestion cab sim IR & DI/headphone outputs.</p>
+                    <p><b>Price: ₱ 9,804.05</b></p>
+            <button onclick="addToCart('TC ELECTRONIC AMPWORX VINTAGE SERIES COMBO DELUXE 65 PREAMP PEDAL', 9804.05)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 7.png');"></div>
+            <h2>LANEY IRONHEART FOUNDRY SERIES IRF-LOUDPEDAL 60W GUITAR AMP PEDAL </h2>
+                    <p>The IRF-LoudPedal is designed to be the sonic centrepiece of your pedalboard setup. Based on Laney's acclaimed Ironheart series of 
+                        guitar amplifiers, the IRF-LoudPedal is a 60-watt, twin-channel pedal amp with footswitchable boost, a 3-band passive EQ, an FX 
+                        loop, and a speaker-emulated XLR out. </p>
+                    <p><b>Price: ₱ 13,330.69</b></p>
+            <button onclick="addToCart('LANEY IRONHEART FOUNDRY SERIES IRF-LOUDPEDAL 60W GUITAR AMP PEDALL', 13330.69)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 4.png');"></div>
+            <h2>ZOOM G6 MULTI EFFECTS PROCESSOR PEDAL </h2>
+                    <p>our complete guitar rig - updated for the modern guitarist</p>
+                    <p><b>Price: ₱ 17,562.65</b></p>
+            <button onclick="addToCart('ZOOM G6 MULTI EFFECTS PROCESSOR PEDAL', 17562.65)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 8.png');"></div>
+            <h2>ORANGE GUITAR BUTLER PREAMP PEDAL</h2>
+                    <p>The Guitar Butler is dual channel preamp pedal that will bring that classic Orange rock tone to any amp! Like the Orange Super Crush 
+                        amp, it uses JFET circuitry to create a valve like feel and response, for an experience that's almost indistinguishable from the real
+                         thing. With separate gain and EQ controls for each channel you can finetune your sound. </p>
+                    <p><b>Price: ₱ 20,383.96</b></p>
+            <button onclick="addToCart('ORANGE GUITAR BUTLER PREAMP PEDAL', 20383.96)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 11.png');"></div>
+            <h2>UNIVERSAL AUDIO UAFX WOODROW '55 INSTRUMENT AMP PEDAL</h2>
+                    <p>Bringing the same class-leading innovation and ease-of-use of its pro audio products to a tactile, 
+                        plug-and-play stompbox format — the forward-thinking brand has now expanded its UAFX range with three "amp-in-a-box"
+                         pedals based on iconic, vintage tone machines from the '50s and '60s.</p>
+                    <p><b>Price: ₱ 21,089.27</b></p>
+            <button onclick="addToCart('UNIVERSAL AUDIO UAFX WOODROW 55 INSTRUMENT AMP PEDAL', 21089.27)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 9.png');"></div>
+            <h2>DSM & HUMBOLDT SIMPLIFIER DELUXE DUAL-CHANNEL STEREO AMP & CAB SIMULATOR PEDAL WITH FOOTSWITCH</h2>
+                    <p>Boasting a myriad of impressive 
+                        features, all contained within a small enclosure that's easy to mount onto your pedalboard or place on a desk, the Simplifier Deluxe is the 
+                        ultimate all-in-one portable amplifier for guitarists who seek versatile, all-analogue tones.</p>
+                    <p><b>Price: ₱ 22,103.80</b></p>
+            <button onclick="addToCart('DSM & HUMBOLDT SIMPLIFIER DELUXE DUAL-CHANNEL STEREO AMP & CAB SIMULATOR PEDAL WITH FOOTSWITCH', 22103.80)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 10.png');"></div>
+            <h2>WALRUS AUDIO MAKO ACS1 AMP & CAB SIMULATOR PEDAL</h2>
+                    <p>The ACS1 is an amplifier and speaker cab simulator delivering the sound and feel of world-class amplifiers, complimentary speaker 
+                        cabinets, and controllable room size. Players can maximize their stereo experience and use the ACS1 to run separate amp and cabinet 
+                        combinations in the left and right channels.</p>
+                    <p><b>Price: ₱ 22,103.80</b></p>
+            <button onclick="addToCart('WALRUS AUDIO MAKO ACS1 AMP & CAB SIMULATOR PEDAL', 22103.80)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 2.png');"></div>
+            <h2>IK MULTIMEDIA AMPLITUBE TONEX AMP MACHINE MODELLING PEDAL </h2>
+                    <p>An unlimited world of amps at your feet! The first 'AI Machine Modelling' technology (AIMM) hardware product.</p>
+                    <p><b>Price: ₱ 25,321.25</b></p>
+            <button onclick="addToCart('IK MULTIMEDIA AMPLITUBE TONEX AMP MACHINE MODELLING PEDAL', 25321.25)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('pedal/pedal\ 3.png');"></div>
+            <h2>VICTORY V4 'THE DUCHESS' GUITAR AMP PEDAL </h2>
+                    <p>Compact 180W Guitar Amplifier with All-Valve Preamp & Two Notes 'DynIR' Cab Sim Technology!</p>
+                    <p><b>Price: ₱ 61,998.27</b></p>
+            <button onclick="addToCart('VICTORY V4 'THE DUCHESS' GUITAR AMP PEDAL', 61998.27)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+    
+
+    </section>
+
+     <!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+<!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+<script>
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+            function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+    //---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+         function updateCartCount() {
+             var cartCountElement = document.getElementById('cartCount');
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             var count = cart.length;
+        
+             cartCountElement.textContent = count;
+         }
+        
+         // Update cart count on page load
+         updateCartCount();
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function searchProducts() {
+    var searchInput = document.getElementById('searchBar').value.toLowerCase();
+    console.log("Search Query: ", searchInput);
+    localStorage.setItem('searchQuery', searchInput);
+    // Redirect to the searchResults.html page
+    window.location.href = 'acoustic guitars.html';
+    window.location.href = 'bass guitars.htm';
+    window.location.href = 'ukulele.html';
+    window.location.href = 'electric guitars.html';
+    window.location.href = 'accessories.html';
+    window.location.href = 'pedal.html';
+    window.location.href = 'amplifier.html';
+}
+    </script>
+    
+    </body>
+    </html>

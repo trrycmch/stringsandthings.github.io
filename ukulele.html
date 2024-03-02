@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>String&Things</title>
+</head>
+
+ <!---------------------------------------------------------------------HEADER------------------------------------------------------------>
+ <header>
+    <div class="logo">
+        <img src="logo 5.png" width="125px">
+    </div>
+<!------------------------------------------------- SEARCH BAR ----------------------------------------------------------------->
+<div class="topnav" id="myTopnav">
+    <input type="text" id="searchBar" placeholder="Search products..." value="">
+    <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+<!-------------------------------------------------------------NAV BAR--------------------------------------------------------------->
+<a href="index.html"><i class="fas fa-home"></i></a>
+<div class="dropdown">
+    <button class="dropbtn"><i class="fas fa-box"></i> &nbsp;Products&nbsp;<i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="acoustic guitars.html">Acoustic Guitars</a>
+        <a href="electric guitars.html">Electric Guitars</a>
+        <a href="bass guitars.html">Bass Guitars</a>
+        <a href="ukulele.html">Ukulele</a>
+        <a href="amplifier.html">Amplifier</a>
+        <a href="pedal.html">Pedal Amplifier</a>
+        <a href="accessories.html">Accessories</a>
+    </div>
+  </div> 
+<a href="message.html"><i class="fas fa-envelope"></i></a>
+<a href="cart.html">
+    <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+</a>
+<!------------------------------------------------- USER PROFILE ----------------------------------------------------------------->
+<a href="profile.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+</header>
+<body>
+    <!------------------------------------------------------------------- Product Listing -------------------------------------------------------------------->
+    <h1>Ukulele</h1>
+    <section>
+       
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 7.png');"></div>
+            <h2>Mahalo MA3KA Artist Elite Series Tenor Ukulele </h2>
+                    <p>The ARTIST ELITE series raises the bar in terms of playability, looks and features at an entry level price point.<br>&nbsp;</p>
+                    <p><b>Price: ₱ 1,500.00</b></p>
+            <button onclick="addToCart('Mahalo MA3KA Artist Elite Series Tenor UkuleleE', 1500.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 4.png');"></div>
+            <h2>Kala Ukadelic Night Light Soprano Ukelele </h2>
+                    <p>On a hot summer night fireflies come out to play, lighting up the sky providing the theme for our Night Light Ukadelic.<br>&nbsp;</p>
+                    <p><b>Price: ₱ 1,912.50</b></p>
+            <button onclick="addToCart('Kala Ukadelic Night Light Soprano Ukelele', 1912.500)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 5.png');"></div>
+            <h2>Kala Ukadelic Moonrise Soprano Ukelele</h2>
+                    <p>On a crisp winter night in the light of a blood red moon, the solitary owl perches on a branch, staring at the mountains that 
+                        disappear into the distance.</p>
+                    <p><b>Price: ₱ 1,912.50</b></p>
+            <button onclick="addToCart('Kala Ukadelic Moonrise Soprano Ukelele', 1912.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 6.png');"></div>
+            <h2>Kala Ukadelic Happy Camper Soprano Ukelele <br>&nbsp;</h2>
+                    <p>The Happy Camper Soprano Ukelele is based on original artwork by Sydney Resel, a film and television producer from Montana.<br>&nbsp;<br>&nbsp;</p>
+                    <p><b>Price: ₱ 1,912.50</b></p>
+            <button onclick="addToCart('Kala Ukadelic Happy Camper Soprano Ukelele', 1912.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 8.png');"></div>
+            <h2>Kala Soprano Ukulele Makala Black MK-SS/BLK<br>&nbsp;</h2>
+                    <p>The mako blue MK-SS/ BLK from Kala is an entry-level Makala Series (Shark) Soprano Ukulele that has an kauri wood top, a mahogany neck, 
+                        and a rosewood fingerboard and custom bridge. </p>
+                    <p><b>Price: ₱ 2,700.00</b></p>
+            <button onclick="addToCart('Kala Soprano Ukulele Makala Black MK-SS/BLK', 2700.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 9.png');"></div>
+            <h2>Kala Soprano Ukulele Makala Green Dolphin MK-SD/GN</h2>
+                    <p>The green gloss MK-SD/GN from Kala is an entry-level Makala Series (Dolphin) Soprano Ukulele that has an kauri wood top, a mahogany neck, and a rosewood fingerboard and custom bridge.</p>
+                    <p><b>Price: ₱ 2,700.00</b></p>
+            <button onclick="addToCart('Kala Soprano Ukulele Makala Green Dolphin MK-SD/GN', 2700.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 2.png');"></div>
+            <h2>Kala Makala Classic Concert Acoustic-Electric Ukulele MK-CE <b>&nbsp;</b></h2>
+                    <p>Our expert craftsmen have hand selected Indonesia’s finest tone woods to bring you the Mahalo Java Series.<br>&nbsp;<br>&nbsp;</p>
+                    <p><b>Price: ₱ 3,750.00</b></p>
+            <button onclick="addToCart('Mahalo MJ2VT3TS Java Series Concert Ukulele (3 Tone Sunburst)', 3750.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 3.png');"></div>
+            <h2>Mahalo MJ2VT3TS Java Series Concert Ukulele (3 Tone Sunburst) </h2>
+                    <p>The Makala Classic line is simply the best entry-level ukulele on the market. Sound and playability usually suffer when offered at 
+                        these affordable prices, but not with the Makala. </p>
+                    <p><b>Price: ₱ 4,725.00</b></p>
+            <button onclick="addToCart('Kala Makala Classic Concert Acoustic-Electric Ukulele MK-CE', 4725.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 1.png');"></div>
+            <h2>ProCORDOBA UP100 </h2>
+                    <p>Every Córdoba ukulele is infused with the warmth, resonance, and beauty of acoustic instruments 
+                        built in the Portuguese style. Expertly crafted from premium materials for comfortable playability 
+                        and beautiful tone, all Córdoba instruments are built for lightness and vibration<br>&nbsp;</p>
+                    <p><b>Price: ₱ 5,484.60</b></p>
+            <button onclick="addToCart('ProCORDOBA UP100', 5484.60)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 11.png');"></div>
+            <h2>Kala KA-CEM Makala Concert Exotic Mahogany Ukulele</h2>
+                    <p>The traditional look of the Exotic Mahogany line is complemented by the unique grain patterns. The woodgrains range in variety from a wavy curl to a straight sharpness and everything between.</p>
+                    <p><b>Price: ₱ 6,375.00</b></p>
+            <button onclick="addToCart('Kala KA-CEM Makala Concert Exotic Mahogany Ukulele', 6375.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 10.png');"></div>
+            <h2>Kala Ukulele Tenor Ebony With EQ KA-EBY-TE<br>&nbsp;</h2>
+                    <p>The Ebony line has a deep brown body with reddish-brown striping, finished in satin for a natural look. The light colored Maple rosette and binding creates a nice contrast to the Ebony body.</p>
+                    <p><b>Price: ₱ 11,325.00</b></p>
+            <button onclick="addToCart('Kala Ukulele Tenor Ebony With EQ KA-EBY-TE', 11325.00)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image" style="background-image: url('Ukulele/ukulele\ 12.png');"></div>
+            <h2>Kala KA-JTE/HBC Makala Tenor Jazz Archtop Ukulele</h2>
+                    <p>Kala's Signature Tenor Ukulele has a beautiful Archtop/Archback design with classic F-holes. Fitted with a spruce top and Mahogany back and sides, this instrument resonates with a warm, 
+                        mellow sound. </p>
+                    <p><b>Price: ₱ 16,537.50</b></p>
+            <button onclick="addToCart('Kala KA-JTE/HBC Makala Tenor Jazz Archtop Ukulele', 16537.50)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        </div>
+
+    </section>
+
+ <!----------------------------------------------------------- FOOTER-------------------------------------------------------------------->
+<footer>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/trrycmch" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/cmchtrry" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+         <!-- Phone Call -->
+         <a href="Tel:+639300496034" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:terrycamacho2021@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <h5><b>&copy; STRINGS & THINGS</b></h5>
+</footer>
+
+
+<!--------------------------------------------------------------JAVASCRIPT----------------------------------------------------------->
+<script>
+    //---------------------------------------------------ADD TO CART------------------------------------------------------------------------//
+            function addToCart(productName, price) {
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             cart.push({ name: productName, price: price });
+             localStorage.setItem('cart', JSON.stringify(cart));
+        
+             // Update cart count in the navigation bar
+             updateCartCount();
+         }
+    //---------------------------------------------------CART COUNT------------------------------------------------------------------------//
+         function updateCartCount() {
+             var cartCountElement = document.getElementById('cartCount');
+             var cart = JSON.parse(localStorage.getItem('cart')) || [];
+             var count = cart.length;
+        
+             cartCountElement.textContent = count;
+         }
+        
+         // Update cart count on page load
+         updateCartCount();
+    //---------------------------------------------------SEARCH BAR------------------------------------------------------------------------//
+    function searchProducts() {
+    var searchInput = document.getElementById('searchBar').value.toLowerCase();
+    console.log("Search Query: ", searchInput);
+    localStorage.setItem('searchQuery', searchInput);
+    // Redirect to the searchResults.html page
+    window.location.href = 'acoustic guitars.html';
+    window.location.href = 'bass guitars.htm';
+    window.location.href = 'ukulele.html';
+    window.location.href = 'electric guitars.html';
+    window.location.href = 'accessories.html';
+    window.location.href = 'pedal.html';
+    window.location.href = 'amplifier.html';
+}
+    </script>
+    
+    </body>
+    </html>
